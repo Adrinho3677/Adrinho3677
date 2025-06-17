@@ -1,0 +1,72 @@
+name: Atualizar README com Últimos Repositórios
+
+on:
+  schedule:
+    - cron: "0 */2 * * *" # roda a cada 6 horas
+  workflow_dispatch: # permite executar manualmente
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Instala dependências
+        run: npm install -g axios
+
+      - name: Atualiza README.md
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+          const axios = require('axios');
+
+          const username = 'Adrinho3677';
+
+          async function getRepos() {
+            const res = await axios.get(`https://api.github.com/users/${username}/repos?sort=updated&per_page=3`);
+            return res.data.map(repo => ({
+              name: repo.name,
+              url: repo.html_url,
+              desc: repo.description || 'Sem descrição',
+              updated: repo.updated_at.split('T')[0]
+            }));
+          }
+
+          function updateReadme(repos) {
+            const readme = fs.readFileSync('README.md', 'utf8');
+
+            const start = '<!--PROJETOS:START-->';
+            const end = '<!--PROJETOS:END-->';
+
+            const regex = new RegExp(`${start}[\\s\\S]*${end}`, 'm');
+
+            const list = repos.map(
+              r => `- 🚀 [**${r.name}**](${r.url}) — ${r.desc} (Atualizado em ${r.updated})`
+            ).join('\n');
+
+            const newSection = `${start}\n${list}\n${end}`;
+
+            const updated = readme.replace(regex, newSection);
+
+            fs.writeFileSync('README.md', updated);
+          }
+
+          (async () => {
+            const repos = await getRepos();
+            updateReadme(repos);
+          })();
+          EOF
+
+      - name: Commit e Push
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Atualiza projetos recentes no README" || echo "Nada para commitar"
+          git push
