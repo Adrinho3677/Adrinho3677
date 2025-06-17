@@ -26,6 +26,9 @@
 ### 📌 Últimos Projetos
 
 <!--PROJETOS:START-->
+- 🚀 [**Adrinho3677**](https://github.com/Adrinho3677/Adrinho3677) — Sem descrição (Atualizado em 2025-06-17)
+- 🚀 [**C_Projects**](https://github.com/Adrinho3677/C_Projects) — Projetos e códigos em C feitos na faculdade. (Atualizado em 2025-06-17)
+- 🚀 [**SchoolTCC_LabControl2.0**](https://github.com/Adrinho3677/SchoolTCC_LabControl2.0) — Lab Control 2.0 (Atualizado em 2025-06-17)
 <!--PROJETOS:END-->
 
 ---
