@@ -24,9 +24,8 @@
 
 ### 📌 Últimos Projetos
 
-- 🔧 [**Sistema de Gestão Escolar**](https://github.com/Adrinho3677/sistema-gestao-escolar) — Aplicação para controle de alunos, salas e frequências.
-- 📊 [**Dashboard Financeiro Django**](https://github.com/Adrinho3677/dashboard-financeiro) — Gerenciamento de finanças pessoais com Django, SQLite e autenticação.
-- 📦 [**Controle de Estoque com Tkinter**](https://github.com/Adrinho3677/controle-estoque-tkinter) — Sistema desktop com interface gráfica para controle de produtos e fornecedores.
+<!--PROJETOS:START-->
+<!--PROJETOS:END-->
 
 ---
 
