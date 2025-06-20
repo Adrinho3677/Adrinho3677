@@ -42,7 +42,7 @@
 
 ---
 
-### 🌐 Onde me encontrar:
+/* ### 🌐 Onde me encontrar:
 
 <div align="center">
   <a href="https://www.linkedin.com/in/adrianpereira" target="_blank">
@@ -60,7 +60,7 @@
 </div>
 
 ---
-
+*\
 ### 🚀 Badges e Status:
 
 ![GitHub followers](https://img.shields.io/github/followers/Adrinho3677?style=social)
