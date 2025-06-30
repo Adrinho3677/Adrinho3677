@@ -26,8 +26,8 @@
 ### 📌 Últimos Projetos
 
 <!--PROJETOS:START-->
+- 🚀 [**Adrinho3677**](https://github.com/Adrinho3677/Adrinho3677) — Sem descrição (Atualizado em 2025-06-30)
 - 🚀 [**ProjectSQL-Mig-and-Pop**](https://github.com/Adrinho3677/ProjectSQL-Mig-and-Pop) — Projeto de Migração e População. (Atualizado em 2025-06-30)
-- 🚀 [**Adrinho3677**](https://github.com/Adrinho3677/Adrinho3677) — Sem descrição (Atualizado em 2025-06-20)
 - 🚀 [**C_Projects**](https://github.com/Adrinho3677/C_Projects) — Projetos e códigos em C feitos na faculdade. (Atualizado em 2025-06-17)
 <!--PROJETOS:END-->
 
